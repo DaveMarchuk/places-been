@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<head>
+  <title>Places I have been to</title>
+  <link href="css/styles.css" rel="stylesheet" type="text/css">
+  <script src="js/scripts.js"></script>
+</head>
+<body>
+  <div class="content-container">
+    <h1>Select a location you want to visit: </h1>
+    <form id="location-select">
+      <label>
+        <input type="radio" name="place-name" value="turkey" id="input">
+        Turkey
+      </label>
+      <label>
+        <input type="radio" name="place-name" value="china" id="input">
+        China
+      </label>
+      <label>
+        <input type="radio" name="place-name" value="brazil" id="input">
+        Brazil
+      </label>
+      <label>
+        <input type="radio" name="place-name" value="belarus" id="input">
+        Belarus
+      </label>
+      <br>
+
+      <button type="submit" class="btn" id="reset">GO!</button>
+    </form>
+  </div>
+
+  <p id="output" class="output-display"></p>
+</body>
+</html>
