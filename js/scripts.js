@@ -9,8 +9,6 @@ Places.prototype.addPlace = function(location) {
   this.locations[location.id] = location;
 };
 
-
-
 //Places.prototype.assignID = function()  {
 //  this.currentID += 1;
 //  return this.currentID;
@@ -33,15 +31,19 @@ let china = new Location("China", "Wall of China", "Summer");
 let brazil = new Location("Brazil", "Rio de Janeiro", "Summer");
 let belarus = new Location("Belarus", "Mir Castle", "Fall");
 
-
+const turKeys = Object.keys(turkey);
+let turkString = "";
+turKeys.forEach(function(key) {
+  turkString = turkString.concat(key + ": " + turkey[key] + "\n");
+});
 
 // UI Logic
 function  handleFormSubmission(event) {
   event.preventDefault();
   const userSelect = document.querySelector("input[name='place-name']:checked").value;
-  
+  console.log(turkString);
   if  (userSelect === "turkey") {
-    document.getElementById("output").innerHTML = turkey.placeName + ', ' + turkey.landmarks + ', ' + turkey.season;
+    document.getElementById("output").innerHTML = turkString;//"<b>" + "Name: " + "</b>" + turkey.placeName + "<br/>" + "Landmark: " + turkey.landmarks + "<br/>" + "Season: " + turkey.season;
   }
   
   if  (userSelect === "china") {
